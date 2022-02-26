@@ -1,6 +1,10 @@
 // import { red } from "@mui/material/colors";
 // import { type } from "@testing-library/user-event/dist/type";
 
+export const getBasketTotal  = (basket) => 
+ basket.reduce((amount, item) => item.price + amount, 0);
+
+
 export const initialState = {
   basket: [
     {
