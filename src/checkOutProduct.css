@@ -1,0 +1,34 @@
+.CheckOutProduct{
+    display: flex;
+    background-color: white;
+}
+
+.CheckOutProduct__title{
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.CheckOutProduct__image{
+    object-fit: contain;
+    width: 180px;
+    height: 180px;
+}
+
+
+.CheckOutProduct__info{
+    padding-left: 20px;
+    height: 220px;
+    max-height: 200px;
+}
+
+.CheckOutProduct__rating{
+    display: flex;
+}
+
+.CheckOutProduct__button{
+    /* border: 2px solid blue; */
+   background-color: #ffa41c;
+    border-radius: 6%;
+    margin-top: 20px;
+ 
+}

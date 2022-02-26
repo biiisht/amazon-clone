@@ -1,0 +1,17 @@
+/* *{
+    margin: 0;
+} */
+
+.product__row{
+    display: flex;
+    z-index: 1;
+}
+
+.home__banner{
+    /* object-fit: cover; */
+    width: 100%;
+    /* mask-image: radial-gradient(black 50%, rgba(0, 0, 0, 0.5) 87%); */
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    margin-bottom: -150px;
+    z-index: -1;
+}
