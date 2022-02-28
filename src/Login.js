@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
-// import { auth } from './firebase'
+import { Link ,useNavigate } from 'react-router-dom'
+import { auth } from './firebase'
 import "./login.css"
 
 function Login() {
@@ -17,18 +17,36 @@ function Login() {
     setPassword(newPassValue);
  }
 
+  function handleClick() {
+    let navigate = useNavigate();
+    navigate('/');
+  };
+
+
   const login = event => {
-    // console.log("yuvyhvi")
-    event.preventDefault();
-    auth.signInWithEmailAndPassword(email, password)
+  // console.log("yuvyhvi")
+  event.preventDefault();
+  auth.signInWithEmailAndPassword(email, password)
     .then((auth) =>{
       //loggedin
+      {handleClick}
     })
-    .catch(e => )
+    .catch(e => {
+      alert(e.message)
+    })
   }
 
   const register = event =>{
     event.preventDefault();
+    auth.createUserWithEmailAndPassword(email, password)
+    .then((auth) =>{
+      // useNavigate('/')
+      // useNavigate("/");
+      //loggedin
+    })
+    .catch(e => {
+      alert(e.message)
+    })
   }
 
   return (
